@@ -15,7 +15,7 @@ class CalculadoraHija(calcoo.Calculadora):
         try:
             return(operando1 / operando2)
         except operando2 == 0:
-             print("Division by zero is not allowed")
+            print("Division by zero is not allowed")
 
 if __name__ == "__main__":
 
