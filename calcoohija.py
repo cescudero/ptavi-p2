@@ -14,17 +14,17 @@ class CalculadoraHija(calcoo.Calculadora):
     def division(self, operando1, operando2):
         try:
             return(operando1 / operando2)
-        except operando2 == 0:
-            print("Division by zero is not allowed")
+        except ZeroDivisionError:
+            sys.exit("Division by zero is not allowed")
 
 if __name__ == "__main__":
 
         calc = CalculadoraHija()
 
         try:
-            operando1 = int(sys.argv[1])
+            operando1 = float(sys.argv[1])
             operacion = sys.argv[2]
-            operando2 = int(sys.argv[3])
+            operando2 = float(sys.argv[3])
         except ValueError:
             sys.exit("Error: Non numerical parameters")
 
